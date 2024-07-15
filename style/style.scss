@@ -347,6 +347,37 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: 1px solid red;
+}
+
+@mixin _1500{
+    @media (max-width: 1500px){
+        @content;
+    }
+}
+
+@mixin _1400{
+    @media (max-width: 1400px){
+        @content;
+    }
+}
+
+@mixin _1200{
+    @media (max-width: 1200px){
+        @content;
+    }
+}
+
+@mixin _1000{
+    @media (max-width: 1000px){
+        @content;
+    }
+}
+
+@mixin _800{
+    @media (max-width: 800px){
+        @content;
+    }
 }
 
 html{
@@ -361,7 +392,12 @@ body{
 }
 
 .container{
-    padding: 0px 200px;
+    padding: 0px 100px;
+    width: 100%;
+
+    @include _1500{
+        padding: 0px 50px;
+    }    
 }
 
 button{
@@ -383,7 +419,16 @@ button{
 
     &-menu{
         width: 100%;
+        max-width: 1900px;
         margin-left: 100px;
+
+        @include _1400{
+            margin-left: 40px;
+        }
+
+        @include _1000{
+            display: none;
+        }
 
         &__items{
             display: flex;
@@ -395,6 +440,10 @@ button{
             list-style: none;
             font-size: 30px;
             font-weight: 600;
+
+            @include _1400{
+                font-size: 23px;
+            }
 
             a{
                 text-decoration: none;
@@ -427,6 +476,14 @@ button{
         text-align: center;
         margin: 80px 0 60px 0;
         color: #5c3064;
+
+        @include _1400{
+           font-size: 50px;
+        }
+
+        @include _800{
+           font-size: 30px;
+        }
     }
 
     &__button{
@@ -455,6 +512,13 @@ button{
         position: relative;
         overflow: hidden;
         width: 100%;
+        padding-bottom: 50px;
+
+        @include _1400{
+            background-image: url('../../images/bg.JPG');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
         &__title{
             color: #fff;
@@ -465,12 +529,31 @@ button{
             right: 0;
             top: 0;
             z-index: -9999;
+
+            @include _1200{
+                display: none;
+            }
         }
 
         &__content{
             display: flex;
             align-items: center;
             justify-content: space-around;
+
+            &-image{
+            
+            @include _1400{
+                width: 250px;
+            }
+
+            @include _800{
+                width: 200px;
+            }
+
+                img{
+                width: 100%;
+                }
+            }
 
             &-right{
                 display: flex;
@@ -484,6 +567,10 @@ button{
                 position: relative;
                 margin-bottom: 60px;
 
+                @include _1400{
+                    z-index: 0;
+                }
+
                 &::after{
                     content: '';
                     position: absolute;
@@ -495,6 +582,10 @@ button{
                     z-index: -10;
                     // opacity: 0.5;
                     filter: blur(50px);
+
+                    @include _1400{
+                        z-index: -1;
+                    }
                 }
             }
 
@@ -503,6 +594,14 @@ button{
                 font-size: 50px;
                 font-weight: 600;
                 color: #fff;
+
+                @include _1400{
+                    font-size: 40px;
+                }
+
+                @include _800{
+                    font-size: 28px;
+                }
 
                 & + &{
                     margin-top: 30px;
@@ -533,7 +632,7 @@ button{
         }
 
         &__items{
-            max-width: 30%;
+            width: 30%;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -557,9 +656,14 @@ button{
                 width: 100%;
                 border-radius: 100%;
                 overflow: hidden;
+                // background-image: url('../../images/ingridient.jpg');
 
                 img{
                     max-width: 300px;
+
+                    @include _1400{
+                        max-width: 200px;
+                    }
                 }
             }
 
@@ -568,6 +672,15 @@ button{
                 color: #5c3064;
             }
         }
+
+        &__product-photo{
+            img{
+                @include _1400{
+                    max-width: 200px;
+                }
+            }
+        }
+
     }
 
     &-reviews{
@@ -585,9 +698,19 @@ button{
             margin-left: -40px;
         }
 
+        // &-animation{
+        //     transition: .5s all ease-in-out;
+        // }
+
         &__item{
             width: 33.3%;
             padding-left: 40px;
+            transform: scale(0.8);
+            transition: .5s all ease-in-out;
+
+            &-show{
+                transform: scale(1);
+            }
 
             &-inner{
                 border: 2px solid #5c3064;
@@ -629,6 +752,7 @@ button{
             background-color: #fff;
             position: absolute;
             top: 120px;
+            z-index: 10;
 
             &-left{
                 left: -50px;
@@ -664,7 +788,16 @@ button{
             align-items: center;
         }
 
-        &__photo{}
+        &__photo{
+            
+            img{
+                width: 500px;
+
+                @include _1200{
+                    width: 300px;
+                }
+            }
+        }
 
         &__right{
             margin-left: 30px;
@@ -676,6 +809,10 @@ button{
             line-height: 45px;
             color: #fff;
             margin-bottom: 30px;
+
+            @include _1200{
+                font-size: 20px;
+            }
         }
 
         &__points{
@@ -683,19 +820,45 @@ button{
             align-items: center;
             justify-content: space-between;
             padding: 20px 0;
+
+            @include _1200{
+                justify-content: space-evenly;
+            }
         }
 
         &__point{
             color: #fff;
             font-size: 40px;
             list-style-position: inside;
+
+            @include _1200{
+                font-size: 25px;
+            }
         }
     }
 
     &-order{
+        margin-bottom: 20px;
+
         &__countdown{
             height: 80px;
             background-color: #b51928;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 40px;
+            font-weight: 600;
+
+            &-text{
+                margin-right: 30px;
+            }
+
+            &-item{
+                &:last-child::before{
+                    content: ':';
+                }
+            }
         }
 
         &__content{
@@ -710,10 +873,31 @@ button{
             flex-direction: column;
             align-items: center;
 
+            @include _1200{
+                width: 40%;
+            }
+
+            &-photo{
+                @include _1200{
+                    width: 250px;
+                }
+
+                @include _1000{
+                    width: 180px;
+                }
+
+                img{
+                    width: 100%;
+                }
+            }
+
             &-price{
+                width: 100%;
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 margin-top: 20px;
+                position: relative;
 
                 &-new{
                     font-size: 50px;
@@ -722,12 +906,27 @@ button{
                     border-radius: 5px;
                     box-sizing: border-box;
                     animation: color-change 3s alternate linear infinite;
+
+                    @include _1200{
+                        animation: none;
+                        position: absolute;
+                        margin-left: 0;
+                        left: 50%;
+                        background-color: #6D3E72;
+                        color: #eb0808;
+                        font-size: 35px;
+                    }
                 }
 
                 &-old{
                     font-size: 25px;
                     color: #5f5e5e;
                     text-decoration: line-through;
+
+                    @include _1200{
+                        position: absolute;
+                        left: 25%;
+                    }
                 }
             }
         }
@@ -737,6 +936,10 @@ button{
             flex-direction: column;
             width: 50%;
             padding-top: 20px;
+
+            @include _1200{
+                width: 60%;
+            }
         }
 
         &__label{
@@ -745,6 +948,10 @@ button{
             align-items: center;
             justify-content: space-between;
             margin-bottom: 20px;
+
+            @include _1400{
+                font-size: 27px;
+            }
         }
 
         &__input{
@@ -770,6 +977,10 @@ button{
 
 .footer{
     flex: 0 0 auto;
+    background-color: #6D3E72;
+    padding: 5px;
+    color: #fff;
+    text-align: center;
 }
 
 
@@ -786,6 +997,7 @@ button{
       color: #eb0808;
       transform: scale(1.5);
     }
-  }
- 
+}
+
+
 

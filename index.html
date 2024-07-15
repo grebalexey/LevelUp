@@ -14,18 +14,18 @@
             </div>
             <div class="header-menu">
                 <ul class="header-menu__items">
-                    <li class="header-menu__item"><a href="#">О продукте</a></li>
-                    <li class="header-menu__item"><a href="#">Состав</a></li>
-                    <li class="header-menu__item"><a href="#">Отзывы</a></li>
-                    <li class="header-menu__item"><a href="#">Заказать</a></li>
+                    <li class="header-menu__item" id="scrollToAbout"><a href="#">О продукте</a></li>
+                    <li class="header-menu__item" id="scrollToIngridients"><a href="#">Состав</a></li>
+                    <li class="header-menu__item" id="scrollToReviews"><a href="#">Отзывы</a></li>
+                    <li class="scrollToOrder header-menu__item"><a href="#">Заказать</a></li>
                 </ul>
             </div>
         </div>
     </header>
     <main class="main">
-        <section class="section-about section">
+        <section class="section-about section" id="About">
             <div class="container">
-                <video autoplay loop muted class="section-about__video bgvideo" id="bgvideo">
+                <video autoplay loop muted class="section-about__video">
                     <source src="video/pills.mp4" type="video/mp4"></source>
                 </video>
                 <div class="section__title section-about__title">“LevelUp”. Продукт для повышения потенции.</div>
@@ -37,13 +37,13 @@
                             <li class="section-about__content-point">Доступный</li>
                             <li class="section-about__content-point">Натуральный</li>
                         </ul>
-                        <button class="button section__button">Заказать</button>
+                        <button class="scrollToOrder button section__button">Заказать</button>
                     </div>
                 </div>
             </div>
         </section>
         <div class="container main-container">
-           <section class="section section-ingridients">
+           <section class="section section-ingridients" id="Ingridients">
                 <div class="section__title">Состав продукта</div>
                 <div class="section__content section-ingridients__content">
                     <div class="section-ingridients__items">
@@ -70,7 +70,7 @@
                         <div class="section-ingridients__product-photo">
                             <img src="images/prod.png" alt="">
                         </div>
-                        <button class="button section__button">Заказать</button>
+                        <button class="scrollToOrder button section__button">Заказать</button>
                     </div>
                     <div class="section-ingridients__items">
                         <div class="section-ingridients__item">
@@ -94,7 +94,7 @@
                     </div>
                 </div>
             </section> 
-            <section class="section section-reviews">
+            <!-- <section class="section section-reviews" id="Reviews">
                 <div class="section__title">Отзывы</div>
                 <div class="section__content section-reviews__content">
                     <button class="section-reviews__button-left section-reviews__button button">
@@ -114,7 +114,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="section-reviews__item">
+                        <div class="section-reviews__item section-reviews__item-show">
                             <div class="section-reviews__item-inner">
                                 <div class="section-reviews__item-photo">
                                     <img src="images/man.jpg" alt="">
@@ -144,7 +144,7 @@
                         </svg>
                     </button>
                 </div>
-            </section>
+            </section> -->
         </div>
         <section class="section section-promo">
             <div class="container section-promo-container">
@@ -157,7 +157,7 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam aliquid perspiciatis unde porro corrupti eum illo odit molestiae eligendi aut vero debitis quia, dolorem error sunt quam aspernatur rerum omnis!
                             Reiciendis, doloremque. Id obcaecati earum natus ut eaque placeat, voluptates quos provident soluta rerum laborum quidem odio eveniet odit vel velit quibusdam nesciunt. A harum odit fuga eos recusandae corporis.
                         </div>
-                        <button class="button section__button">Заказать</button>
+                        <button class="scrollToOrder button section__button">Заказать</button>
                     </div>
                 </div>
                 <ul class="section-promo__points">
@@ -167,10 +167,13 @@
                 </ul>
             </div>
         </section>
-        <section class="section section-order">
+        <section class="section section-order" id="Order">
             <div class="container section-promo-container">
                 <div class="section__title">“LevelUp”. Продукт для повышения потенции.</div>
-                <div class="section-order__countdown"></div>
+                <div class="section-order__countdown">
+                    <div class="section-order__countdown-text">Успей заказать со скидкой 50%</div>
+                    <div class="section-order__countdown-value" id="countdown"></div>
+                </div>
                 <div class="section-order__content">
                     <div class="section-order__product">
                         <div class="section-order__product-photo">
@@ -198,7 +201,9 @@
         </section>
     </main>
     <footer class="footer">
-
+        Все права защищены
     </footer>
+
+    <script src="script/script.js"></script>
 </body>
 </html>
