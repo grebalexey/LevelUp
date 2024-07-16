@@ -33,46 +33,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // слайдер
 
-    let nextBtn = document.querySelector('.section-reviews__button-right');
-    let prevBtn = document.querySelector('.section-reviews__button-left');
-    let slideIndex = 0;
-    let slider = document.querySelector('.section-reviews__items');
-    // let slides = document.querySelectorAll('.section-reviews__item');
-    // let slideCount = slides.length;
-    
-    
-    
-    
+    // const courusel = document.querySelector('.section-reviews__items');
+    // const btns = document.querySelectorAll('.section-reviews__button');
+    // const firstReviewWidth = courusel.querySelector('.section-reviews__item').offsetWidth;
 
-    nextBtn.addEventListener('click',()=>{
-        
-        let slide = slider.firstElementChild;
-        console.log(slide);
-        let showSlide =slide.nextElementSibling;
-        console.log(showSlide);
-        let moveGap = showSlide.clientWidth;
-        slide.style.transform = 'translateX(-' + `${moveGap}`+ 'px)';
+    // console.log (firstReviewWidth);
 
-        slide.style.order ++;
-        // slides.forEach((slide)=>{
-        //     let moveGap = slide.clientWidth;
-        //     console.log(moveGap);
-        //     slide.style.transform = 'translateX(-' + `${moveGap}`+ 'px)';
-            
-        //     // slide.previousSibling.classList.remove("section-reviews__item-show");
-        // })
-        
-    })
+    // btns.forEach(btn => {
+    //     btn.addEventListener('click', () => {
+    //         console.log(btn.id);
 
-    prevBtn.addEventListener('click',()=>{
-        // slides.forEach((slide)=>{
-        //     let moveGap = slide.clientWidth;
-        //     slide.style.transform = 'translateX(' + `${moveGap}`+ 'px)';
-            
-        //     // slide.previousSibling.classList.remove("section-reviews__item-show");
-        // })
-        
-    })
+    //         if (btn.id === 'leftBtn'){
+    //             console.log('left0');
+    //             courusel.style.transform = 'translateX(-' + `${firstReviewWidth}` + 'px)';
+                
+    //         } else {
+    //             courusel.style.transform = 'translateX(' + `${firstReviewWidth}` + 'px)';
+    //         }
+
+
+    //         // courusel.scrollLeft += btn.id === 'leftBtn' ? -firstReviewWidth : firstReviewWidth;
+    //     })
+    // })
 
 
     // обратный отсчет

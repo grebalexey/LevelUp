@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LevelUp</title>
     <link rel="stylesheet" href="style/dist/style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <header class="header">
@@ -94,10 +98,10 @@
                     </div>
                 </div>
             </section> 
-            <!-- <section class="section section-reviews" id="Reviews">
+            <section class="section section-reviews" id="Reviews">
                 <div class="section__title">Отзывы</div>
                 <div class="section__content section-reviews__content">
-                    <button class="section-reviews__button-left section-reviews__button button">
+                    <button id="leftBtn" class="section-reviews__button-left section-reviews__button button">
                         <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15 18L9 12L15 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -138,13 +142,13 @@
                             </div>
                         </div>
                     </div>
-                    <button class="section-reviews__button-right section-reviews__button button">
+                    <button id="rightBtn" class="section-reviews__button-right section-reviews__button button">
                         <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 18L15 12L9 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
                 </div>
-            </section> -->
+            </section>
         </div>
         <section class="section section-promo">
             <div class="container section-promo-container">
@@ -204,6 +208,43 @@
         Все права защищены
     </footer>
 
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.0/jquery-migrate.min.js" integrity="sha512-Rdmh/cMyteRAbh2Jz0XazNOr8zFg1jhijhErDJdk6X4wh2E4NpNsQU1pKvHgAk50OY8GsCDYfxBBDAEbR4MV9g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+    <script>
+        $(document).ready(function(){
+            $('.section-reviews__items').slick({
+                // centerMode: true,
+                // centerPadding: '60px',
+                // slidesToShow: 3,
+                // responsive: [
+                //     {
+                //     breakpoint: 768,
+                //     settings: {
+                //         arrows: false,
+                //         centerMode: true,
+                //         centerPadding: '40px',
+                //         slidesToShow: 3
+                //     }
+                //     },
+                //     {
+                //     breakpoint: 480,
+                //     settings: {
+                //         arrows: false,
+                //         centerMode: true,
+                //         centerPadding: '40px',
+                //         slidesToShow: 1
+                //     }
+                //     }
+                // ]
+            });
+        });
+
+    </script>
+
+
     <script src="script/script.js"></script>
+
 </body>
 </html>

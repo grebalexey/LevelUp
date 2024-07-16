@@ -705,7 +705,7 @@ button{
         &__item{
             width: 33.3%;
             padding-left: 40px;
-            transform: scale(0.8);
+            // transform: scale(0.8);
             transition: .5s all ease-in-out;
 
             &-show{
@@ -727,6 +727,7 @@ button{
                 img{
                     max-width: 400px;
                     max-height: 266px;
+                    width: 100%;
                 }
             }
 
@@ -740,6 +741,10 @@ button{
                 font-size: 20px;
                 line-height: 30px;
                 padding: 0 15px 15px 15px;
+
+                @include _1400{
+                    font-size: 18px;
+                }
             }
         }
 
@@ -756,10 +761,18 @@ button{
 
             &-left{
                 left: -50px;
+
+                @include _1500{
+                    left: -20px;
+                }
             }
 
             &-right{
                 right: -50px;
+
+                @include _1500{
+                    right: -20px;
+                }
             }
 
             svg{
