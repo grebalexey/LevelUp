@@ -394,6 +394,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .section__title {
@@ -586,21 +587,28 @@ button {
     max-width: 200px;
   }
 }
+.section-reviews {
+  width: 100%;
+}
 .section-reviews__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  min-width: 0;
+  width: 100%;
 }
 .section-reviews__items {
   display: flex;
-  overflow: hidden;
-  margin-left: -40px;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
 }
 .section-reviews__item {
   width: 33.3%;
   padding-left: 40px;
   transition: 0.5s all ease-in-out;
+  min-width: 0;
 }
 .section-reviews__item-show {
   transform: scale(1);
@@ -610,11 +618,13 @@ button {
   box-sizing: border-box;
   border-radius: 10px;
   overflow: hidden;
+  min-width: 0;
 }
 .section-reviews__item-photo {
-  width: 100%;
+  width: 500px;
   background-color: #5c3064;
   overflow: hidden;
+  min-width: 0;
 }
 .section-reviews__item-photo img {
   max-width: 400px;
@@ -630,6 +640,7 @@ button {
   font-size: 20px;
   line-height: 30px;
   padding: 0 15px 15px 15px;
+  width: 500px;
 }
 @media (max-width: 1400px) {
   .section-reviews__item-text {
