@@ -30,15 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
         } )
     });
     
-
-    // слайдер
-
-    let btns = document.querySelectorAll('.section-reviews__button');
-    let courusel = document.querySelector('.section-reviews__items');
-    let couruselItems = document.querySelectorAll('.section-reviews__item');
-
-    
-
     // обратный отсчет
 
     let time = 1800;
