@@ -33,29 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // слайдер
 
-    // const courusel = document.querySelector('.section-reviews__items');
-    // const btns = document.querySelectorAll('.section-reviews__button');
-    // const firstReviewWidth = courusel.querySelector('.section-reviews__item').offsetWidth;
+    let btns = document.querySelectorAll('.section-reviews__button');
+    let courusel = document.querySelector('.section-reviews__items');
+    let couruselItems = document.querySelectorAll('.section-reviews__item');
 
-    // console.log (firstReviewWidth);
-
-    // btns.forEach(btn => {
-    //     btn.addEventListener('click', () => {
-    //         console.log(btn.id);
-
-    //         if (btn.id === 'leftBtn'){
-    //             console.log('left0');
-    //             courusel.style.transform = 'translateX(-' + `${firstReviewWidth}` + 'px)';
-                
-    //         } else {
-    //             courusel.style.transform = 'translateX(' + `${firstReviewWidth}` + 'px)';
-    //         }
-
-
-    //         // courusel.scrollLeft += btn.id === 'leftBtn' ? -firstReviewWidth : firstReviewWidth;
-    //     })
-    // })
-
+    
 
     // обратный отсчет
 
