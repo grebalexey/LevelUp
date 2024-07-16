@@ -569,6 +569,10 @@ button{
                 flex-direction: column;
                 align-items: center;
                 margin-left: 60px;
+
+                @include _600{
+                    display: none;
+                }
             }
 
             &-points{
@@ -635,6 +639,10 @@ button{
 
             @include _600{
                 justify-content: space-between;
+                background-image: url(../../images/prod.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: 50% 50%;
             }
         }
 
@@ -687,6 +695,10 @@ button{
                 border: 1px solid #5c3064;
                 // background-image: url('../../images/ingridient.jpg');
 
+                @include _600{
+                    display: none;
+                }
+
                 img{
                     max-width: 300px;
 
@@ -699,6 +711,10 @@ button{
             &-title{
                 font-size: 30px;
                 color: #5c3064;
+
+                @include _600{
+                    font-size: 20px;
+                }
             }
         }
     }
@@ -895,6 +911,10 @@ button{
             @include _1200{
                 justify-content: space-evenly;
             }
+
+            @include _600{
+                display: none;
+            }
         }
 
         &__point{
@@ -913,7 +933,15 @@ button{
     }
 
     &-order{
-        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+        background: linear-gradient(45deg, #6D3E72, transparent);
+
+        &-container{
+            max-width: 1500px;
+        }
 
         &__countdown{
             height: 80px;
@@ -941,6 +969,7 @@ button{
 
                 @include _800{
                     font-size: 25px;
+                    text-align: center;
                 }
             }
 
@@ -955,6 +984,7 @@ button{
             display: flex;
             justify-content: space-between;
             padding: 30px;
+            position: relative;
         }
 
         &__product{
@@ -1053,6 +1083,13 @@ button{
                     width: 50%;
                     padding-top: 20px;
                 }
+
+                @include _600{
+                    width: 80%;
+                    position: absolute;
+                    right: 0;
+                    background: rgba(255, 255, 255, 0.5);
+                }
             }
         }
 
@@ -1079,6 +1116,24 @@ button{
                 width: 100%;
             }
             
+            &::placeholder{
+                opacity: 0;
+                text-align: right;
+
+                @include _1000{
+                    opacity: 1;
+                    text-align: left;
+                }
+            }
+            
+            &:focus::placeholder{
+                opacity: 1;
+                text-align: right;
+
+                @include _1000{
+                    opacity: 0;
+                }
+            }
         }
 
         &__button{
@@ -1090,6 +1145,10 @@ button{
             &:hover{
                 background-color: #5c3064;
                 color: #fff;
+            }
+
+            @include _600{
+                background-color: #fff;
             }
         }
     }
